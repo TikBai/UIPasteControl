@@ -26,23 +26,23 @@
     [self.view addSubview:textfield];
     
     //UIPasteControl 配置
-    UIPasteControlConfiguration *pastConfig = [[UIPasteControlConfiguration alloc] init];
-    pastConfig.displayMode = UIPasteControlDisplayModeIconAndLabel;
-    pastConfig.cornerStyle = UIButtonConfigurationCornerStyleFixed;
-    pastConfig.cornerRadius = 50;
-    pastConfig.baseBackgroundColor = [UIColor yellowColor];
-    pastConfig.baseForegroundColor = [UIColor redColor];
+    UIPasteControlConfiguration *pasteConfig = [[UIPasteControlConfiguration alloc] init];
+    pasteConfig.displayMode = UIPasteControlDisplayModeIconAndLabel;
+    pasteConfig.cornerStyle = UIButtonConfigurationCornerStyleFixed;
+    pasteConfig.cornerRadius = 50;
+    pasteConfig.baseBackgroundColor = [UIColor yellowColor];
+    pasteConfig.baseForegroundColor = [UIColor redColor];
     
-//    UIPasteControl *pastControl = [[UIPasteControl alloc] initWithFrame:CGRectMake(100,200, 200, 150)];
+//    UIPasteControl *pasteControl = [[UIPasteControl alloc] initWithFrame:CGRectMake(100,200, 200, 150)];
     //初始化UIPasteControl
-    UIPasteControl *pastControl = [[UIPasteControl alloc] initWithConfiguration:pastConfig];
-    pastControl.frame =CGRectMake(100, 200, 200, 50);
+    UIPasteControl *pasteControl = [[UIPasteControl alloc] initWithConfiguration:pasteConfig];
+    pasteControl.frame =CGRectMake(100, 200, 200, 50);
     //关联控件
-    pastControl.target = textfield;
+    pasteControl.target = textfield;
     
     //UIPasteboard *board = [UIPasteboard generalPasteboard];
 
-    [self.view  addSubview:pastControl];
+    [self.view  addSubview:pasteControl];
     // Do any additional setup after loading the view.
 }
 
