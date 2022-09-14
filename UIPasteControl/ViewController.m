@@ -26,7 +26,7 @@
     [self.view addSubview:textfield];
     
     //UIPasteControl 配置
-    UIPasteControlConfiguration *pastConfig;
+    UIPasteControlConfiguration *pastConfig = [[UIPasteControlConfiguration alloc] init];
     /**以下配置未生效,不确定是否为系统问题,或是代码问题!**/
     pastConfig.displayMode = UIPasteControlDisplayModeIconAndLabel;
     pastConfig.cornerStyle = UIButtonConfigurationCornerStyleFixed;
@@ -41,7 +41,8 @@
     //关联控件
     pastControl.target = textfield;
     
-    
+    //UIPasteboard *board = [UIPasteboard generalPasteboard];
+
     [self.view  addSubview:pastControl];
     // Do any additional setup after loading the view.
 }
